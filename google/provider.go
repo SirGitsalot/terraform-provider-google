@@ -102,6 +102,7 @@ func Provider() terraform.ResourceProvider {
 			GeneratedBinaryAuthorizationResourcesMap,
 			GeneratedComputeResourcesMap,
 			GeneratedContainerAnalysisResourcesMap,
+			GeneratedMonitoringResourcesMap,
 			GeneratedRedisResourcesMap,
 			GeneratedResourceManagerResourcesMap,
 			map[string]*schema.Resource{

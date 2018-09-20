@@ -12,6 +12,7 @@ import (
 	"github.com/hashicorp/terraform/helper/pathorcontents"
 	"github.com/hashicorp/terraform/version"
 
+	"cloud.google.com/go/monitoring/apiv3"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"golang.org/x/oauth2/jwt"
@@ -72,6 +73,8 @@ type Config struct {
 	clientDnsBeta                *dnsBeta.Service
 	clientKms                    *cloudkms.Service
 	clientLogging                *cloudlogging.Service
+	clientMonitoringGroup        *monitoring.GroupClient
+	clientMonitoringPolicy       *monitoring.AlertPolicyClient
 	clientPubsub                 *pubsub.Service
 	clientRedis                  *redis.Service
 	clientResourceManager        *cloudresourcemanager.Service
@@ -216,6 +219,18 @@ func (c *Config) loadAndValidate() error {
 		return err
 	}
 	c.clientLogging.UserAgent = userAgent
+
+	log.Printf("[INFO] Instantiating Google Stackdriver Monitoring Group client...")
+	c.clientMonitoringGroup, err = monitoring.NewGroupClient(context.Background())
+	if err != nil {
+		return err
+	}
+
+	log.Printf("[INFO] Instantiating Google Stackdriver Monitoring Policy client...")
+	c.clientMonitoringPolicy, err = monitoring.NewAlertPolicyClient(context.Background())
+	if err != nil {
+		return err
+	}
 
 	log.Printf("[INFO] Instantiating Google Storage Client...")
 	c.clientStorage, err = storage.New(client)

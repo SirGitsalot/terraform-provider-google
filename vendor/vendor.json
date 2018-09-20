@@ -63,6 +63,12 @@
 			"revisionTime": "2018-08-17T23:47:42Z"
 		},
 		{
+			"checksumSHA1": "gnHWuZ+zTrs5V3wz6fW8BxnJvS8=",
+			"path": "cloud.google.com/go/monitoring/apiv3",
+			"revision": "b5a288c7c0414f39e6003ee5f4d38288a2bd7163",
+			"revisionTime": "2018-09-11T20:21:00Z"
+		},
+		{
 			"checksumSHA1": "K4XqCNNgCtFsGbmX6CxF2ay87Dw=",
 			"path": "contrib.go.opencensus.io/exporter/stackdriver/propagation",
 			"revision": "2f26a5d1900c27d75297423079bda98fedb6712b",
@@ -1659,6 +1665,12 @@
 			"revisionTime": "2018-08-17T15:16:27Z"
 		},
 		{
+			"checksumSHA1": "C7k7TkQQYJLsRjT1hQ0c5WP5lgY=",
+			"path": "google.golang.org/genproto/googleapis/api/distribution",
+			"revision": "5a2fd4cab2d6d4a18e70c34937662526cd0c4bd1",
+			"revisionTime": "2018-09-12T23:39:45Z"
+		},
+		{
 			"checksumSHA1": "/mivzME0KwsLZ1dVoV2aNt2UO28=",
 			"path": "google.golang.org/genproto/googleapis/api/label",
 			"revision": "c66870c02cf823ceb633bcd05be3c7cda29976f4",
@@ -1705,6 +1717,12 @@
 			"path": "google.golang.org/genproto/googleapis/longrunning",
 			"revision": "c66870c02cf823ceb633bcd05be3c7cda29976f4",
 			"revisionTime": "2018-08-17T15:16:27Z"
+		},
+		{
+			"checksumSHA1": "RjcNsxd2FIZNc5z9TuLp/hdU9KY=",
+			"path": "google.golang.org/genproto/googleapis/monitoring/v3",
+			"revision": "5a2fd4cab2d6d4a18e70c34937662526cd0c4bd1",
+			"revisionTime": "2018-09-12T23:39:45Z"
 		},
 		{
 			"checksumSHA1": "oUD15OBRSXt0t4P0s6HMjH/+iQo=",
